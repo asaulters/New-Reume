@@ -1,0 +1,181 @@
+body{
+    box-sizing: border-box;
+    overflow: scroll;
+}
+
+.site-banner {
+    text-align: center;
+    border-bottom: 1px blue solid;
+    background-color: #17b87e;
+    max-width: 60%;
+
+}
+
+#briefIcon,
+#initialIcon{
+    display: none;
+}
+
+#stepContainer {
+    text-align: center;
+}
+#step1Title {
+    text-align: center;
+    color: gray;
+
+    margin-bottom: 5%;
+    margin-top: 10%;
+}
+
+.step1TitleDescription{
+    color: black;
+    
+}
+
+ @media(min-width: 600px)   {
+    #stepContainer {
+        display: grid;
+        grid-template-rows: 10px 100px repeat(autofil, 1fr);
+        grid-template-columns: 25% 1fr;
+    }
+
+    #step1Title{
+        grid-column: 1 / -1 ;
+        grid-row: 2 / 2;
+        margin-left: 5%;
+        padding-top: 10%;
+        border-bottom: gray thin solid;
+        margin-bottom: 5%;
+        color: gray;
+    }
+
+    .step1TitleDescription{
+        color: black;
+    }
+
+    #briefIcon {
+        display: initial;
+        grid-column: 1/1;
+        grid-row: 3/3;
+        align-self: center;
+        margin-left: 30%;
+        width: 60%;
+        height: 85%;
+
+        margin-top: 5%;
+        margin-bottom: 5%;
+        padding: 10%;
+        border: thin solid gray ;
+        color: blue;
+        top: 50%;
+    }
+
+    #briefWriteUp{
+        padding-top: 5%;
+        width: 100%;
+        grid-row: 3/6;
+        grid-column: 2/2;
+        padding-bottom: 5%;
+    }
+
+
+    #initialIcon {
+        display: initial;
+        grid-column: 1/1;
+        grid-row: 4/4;
+        align-self: center;
+        margin-left: 30%;
+        width: 60%;
+        height: 85%;
+
+        margin-top: 10%;
+        margin-bottom: 5%;
+        padding: 10%;
+        border: thin solid gray ;
+        color: blue;
+        top: 50%;
+    }
+
+    .initialWriteUp {
+        padding-top: 5%;
+        width: 100%;
+        grid-row: 4/4;
+        grid-column: 2/2;
+        margin-top: 5%;
+    }
+}
+@media(min-width: 850px ) {
+    #stepContainer {
+        display: grid;
+        grid-template-rows: 30px% 200px repeat(autofil, 250px);
+        grid-template-columns: 10% 1fr 1fr 1fr;
+        /* grid-template-areas:
+        "..."
+        "step1Title step1Title step1Title"
+        "briefIcon briefWriteUp  briefWriteUps"
+        "briefWriteUps"
+        ; */
+
+    }
+
+    #step1Title{
+        grid-column: 2 / 4 ;
+        grid-row: 2 / 2;
+        margin-left: 15%;
+        padding-top: 10%;
+        border-bottom: gray thin solid;
+        margin-bottom: 5%;
+        color: gray;
+    }
+
+    .step1TitleDescription{
+        color: black;
+    }
+
+    #briefIcon {
+        grid-column: 2/2;
+        grid-row: 3/3;
+        align-self: center;
+        margin-left: 30%;
+        width: 60%;
+        height: 85%;
+    
+        margin-top: 5%;
+        margin-bottom: 5%;
+        padding: 10%;
+        border: thin solid gray ;
+        color: blue;
+        top: 50%;
+    }
+
+    #briefWriteUp{
+        padding-top: 5%;
+        width: 160%;
+        grid-row: 3/6;
+        grid-column: 3/4;
+    }
+
+    #initialIcon {
+        grid-column: 2/2;
+        grid-row: 4/4;
+        align-self: center;
+        margin-left: 30%;
+        width: 60%;
+        height: 85%;
+    
+        margin-top: 5%;
+        margin-bottom: 5%;
+        padding: 10%;
+        border: thin solid gray ;
+        color: blue;
+        top: 50%;
+    }
+
+    .initialWriteUp {
+        padding-top: 5%;
+        width: 160%;
+        grid-row: 4/4;
+        grid-column: 3/4;
+    }
+
+}
