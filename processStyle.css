@@ -12,19 +12,29 @@ body{
 }
 
 #briefIcon,
-#initialIcon{
+#initialIcon,
+.wireframeIcon,
+.designIcon,
+.codeIcon,
+.trainingIcon,
+.launchIcon {
     display: none;
 }
 
-#stepContainer {
+#step1Container,
+#step2Container,
+#step3Container {
     text-align: center;
 }
 #step1Title {
     text-align: center;
     color: gray;
-
+    /* border-bottom: gray 1px solid; */
     margin-bottom: 5%;
     margin-top: 10%;
+    width: 90%;
+    margin-left: 5%;
+    padding-bottom: 5%;
 }
 
 .step1TitleDescription{
@@ -32,46 +42,55 @@ body{
     
 }
 
+.footerLinks{
+    display: flex;
+    justify-content: right;
+}
+
+#ctaButton{
+    border-radius: 25%;
+}
+
+
  @media(min-width: 600px)   {
-    #stepContainer {
+    #stepContainer{
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    #step1Container {
         display: grid;
-        grid-template-rows: 10px 100px repeat(autofil, 1fr);
+        grid-template-rows: 50px .5fr 1fr 1fr;
         grid-template-columns: 25% 1fr;
+        grid-gap: 10px;
     }
 
     #step1Title{
         grid-column: 1 / -1 ;
-        grid-row: 2 / 2;
+        grid-row: 1 / -1;
         margin-left: 5%;
-        padding-top: 10%;
-        border-bottom: gray thin solid;
-        margin-bottom: 5%;
         color: gray;
+        /* border-bottom: solid 1px gray; */
     }
 
     .step1TitleDescription{
         color: black;
+        border-bottom: solid 1px gray;
+    
     }
 
     #briefIcon {
-        display: initial;
-        grid-column: 1/1;
-        grid-row: 3/3;
-        align-self: center;
-        margin-left: 30%;
-        width: 60%;
-        height: 85%;
-
-        margin-top: 5%;
-        margin-bottom: 5%;
-        padding: 10%;
-        border: thin solid gray ;
         color: blue;
-        top: 50%;
+        display: initial;
+        grid-row: 3/3;
+        grid-column: 1/1;
+        padding:20%;
+        border: 1px gray solid;
+        background-color: #E9ECEF;
     }
 
     #briefWriteUp{
-        padding-top: 5%;
+        
         width: 100%;
         grid-row: 3/6;
         grid-column: 2/2;
@@ -81,19 +100,11 @@ body{
 
     #initialIcon {
         display: initial;
-        grid-column: 1/1;
         grid-row: 4/4;
-        align-self: center;
-        margin-left: 30%;
-        width: 60%;
-        height: 85%;
-
-        margin-top: 10%;
-        margin-bottom: 5%;
-        padding: 10%;
-        border: thin solid gray ;
-        color: blue;
-        top: 50%;
+        grid-column: 1/1;
+        padding:20%;
+        border: 1px gray solid;
+        background-color: #E9ECEF;
     }
 
     .initialWriteUp {
@@ -101,81 +112,106 @@ body{
         width: 100%;
         grid-row: 4/4;
         grid-column: 2/2;
-        margin-top: 5%;
+        
     }
-}
-@media(min-width: 850px ) {
-    #stepContainer {
+
+    #step2Container{
         display: grid;
-        grid-template-rows: 30px% 200px repeat(autofil, 250px);
-        grid-template-columns: 10% 1fr 1fr 1fr;
-        /* grid-template-areas:
-        "..."
-        "step1Title step1Title step1Title"
-        "briefIcon briefWriteUp  briefWriteUps"
-        "briefWriteUps"
-        ; */
+        grid-template-columns: 1fr 25%;
+        grid-template-rows: 45px 100px 1fr 1fr;
+        grid-gap: 10px;
 
     }
 
-    #step1Title{
-        grid-column: 2 / 4 ;
-        grid-row: 2 / 2;
-        margin-left: 15%;
-        padding-top: 10%;
-        border-bottom: gray thin solid;
-        margin-bottom: 5%;
+    #step2Title {
+        grid-column: 1 /2  ;
+        grid-row: 2 / 3;
+        margin-left: 5%;
+    
         color: gray;
     }
 
-    .step1TitleDescription{
-        color: black;
-    }
-
-    #briefIcon {
-        grid-column: 2/2;
+    .wireframeWriteUp{
         grid-row: 3/3;
-        align-self: center;
-        margin-left: 30%;
-        width: 60%;
-        height: 85%;
-    
-        margin-top: 5%;
-        margin-bottom: 5%;
-        padding: 10%;
-        border: thin solid gray ;
-        color: blue;
-        top: 50%;
+        grid-column: 2/1;
     }
 
-    #briefWriteUp{
-        padding-top: 5%;
-        width: 160%;
-        grid-row: 3/6;
-        grid-column: 3/4;
+    .designWriteUp {
+        grid-row: 4/4 ;
+        grid-column: 1 / 2;
     }
-
-    #initialIcon {
+    .wireframeIcon{
+        display: initial;
+        grid-row: 3/3;
         grid-column: 2/2;
+        padding:20%;
+        border: 1px gray solid;
+        background-color: #E9ECEF;
+    }
+    .designIcon{
+        display: initial;
         grid-row: 4/4;
-        align-self: center;
-        margin-left: 30%;
-        width: 60%;
-        height: 85%;
-    
-        margin-top: 5%;
-        margin-bottom: 5%;
-        padding: 10%;
-        border: thin solid gray ;
-        color: blue;
-        top: 50%;
+        grid-column: 2/2;
+        padding:20%;
+        border: 1px gray solid;
+        background-color: #E9ECEF;
     }
 
-    .initialWriteUp {
-        padding-top: 5%;
-        width: 160%;
+    #step3Container{
+        display: grid;
+        grid-template-columns: 25% 1fr;
+        grid-template-rows: 45px 70px 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
+    .codeWriteUp{
+        grid-row: 3 / 3;
+        grid-column: 2/2;
+    }
+    .trainingWriteUp{
+        grid-row: 4 / 4;
+        grid-column: 2/2;
+    }
+    .launchWriteUp{
+        grid-row: 5 / 5;
+        grid-column: 2/2;
+        margin-bottom: 10%;
+    }
+    .codeIcon{
+        display: initial;
+        grid-row: 3/3;
+        grid-column: 1/1;
+        padding:20%;
+        border: 1px gray solid;
+        background-color: #E9ECEF;
+    }
+    .trainingIcon{
+        display: initial;
         grid-row: 4/4;
-        grid-column: 3/4;
+        grid-column: 1/1;
+        padding:20%;
+        border: 1px gray solid;
+        background-color: #E9ECEF;
+    }
+    .launchIcon{
+        display: initial;
+        grid-row: 5/5;
+        grid-column: 1/1;
+        padding:20%;
+        border: 1px gray solid;
+        background-color: #E9ECEF;
+        margin-bottom: 10%;
     }
 
+}
+@media(min-width: 850px ) {
+    #stepContainer{
+        max-width: 60%;
+        margin: auto;
+    }
+
+    #step1Container,
+    #step2Container,
+    #step3Container{
+        grid-gap:25px;
+    }    
 }
